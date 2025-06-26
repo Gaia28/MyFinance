@@ -9,20 +9,27 @@
 <body>
     <main class="container">
         <section class="welcome-container">
-            <h1>Bem-vindo ao MyFinance</h1>
-            <p>Gerencie suas finanças de forma simples e eficiente.</p>
+            <h1>Welcome to MyFinance</h1>
+            <p>Manage your finances simply and efficiently.</p>
             <p>Faça login para continuar.</p>
+            <img src="../assets/logo.svg" alt="" class="logo">
 
         </section>
         <section class="login-container">
-            <form action="" method="post">
-                <h1>Login</h1>
-                <div class="input-group">
-                    <input type="email" id="email" name="email" required placeholder="Email">
-                    <input type="password" id="senha" name="senha" required placeholder="Senha">
-                    <button type="submit">Entrar</button>
-                    <a href="telaDeCadastro.php">Criar conta</a>
-            </form>
+            <div class="form-content">
+                <form action="" method="post">
+                    
+                    <div class="input-group">
+                        <h1>Login</h1>
+                        <input type="email" id="email" name="email" required placeholder="Email">
+                        <input type="password" id="senha" name="senha" required placeholder="Senha">
+                          <button type="submit">Entrar</button>
+                    <p>Don't have an account? <a href="telaDeCadastro.php"> Register</a></p> 
+                    </div>
+                  
+                </form>
+
+            </div>
 
         </section>
 

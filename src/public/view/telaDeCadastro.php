@@ -8,24 +8,30 @@
 </head>
 <body>
     <main class="container">
+
         <section class="welcome-container">
-            <h1>Crie sua conta no MyFinance</h1>
-            <p>Gerencie suas finanças de forma simples e eficiente.</p>
-            <p>Preencha os dados para se cadastrar.</p>
+            <h1>Welcome to MyFinance</h1>
+            <p>Create your account and log in</p>
+            <img src="../assets/CreateAccount.svg" alt="create account image" class="logo">
         </section>
+
         <section class="login-container">
-            <form action="" method="post">
-                <h1>Cadastro</h1>
+            <form class="form-content" action="" method="post">
+                
                 <div class="input-group">
-                    <input type="text" id="nome" name="nome" required placeholder="Nome completo">
+                    <h1>Register</h1>
+                    <input type="text" id="nome" name="nome" required placeholder="Full Name">
                     <input type="email" id="email" name="email" required placeholder="Email">
-                    <input type="password" id="senha" name="senha" required placeholder="Senha">
-                    <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirmar senha">
-                </div>
-                <button type="submit">Cadastrar</button>
-                <a href="telaDeLogin.php">Já tem conta? Entrar</a>
-            </form>
+                    <input type="password" id="senha" name="senha" required placeholder="Password">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirm Password">
+
+                    <button type="submit">Cadastrar</button>
+                <p>Already have an account?<a href="telaDeLogin.php"> Enter</a></p>
+
         </section>
+                
+            </form>
+        </div>
     </main>
 </body>
 </html>
