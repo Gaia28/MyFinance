@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - MyFinance</title>
-    <link rel="stylesheet" href="../styles/styleLogon.css">
+    <title>Welcome to MyFinance</title>
+    <link rel="stylesheet" href="../../public/styles/styleLogon.css">
 </head>
 <body>
     <main class="container">
-
-        <div class="welcome-container">
+        <section class="welcome-container">
             <h1>Bem-vindo ao MyFinance</h1>
-            <p>Gerencie suas finanças de forma simples e eficiente</p>
-        </div>
+            <p>Gerencie suas finanças de forma simples e eficiente.</p>
+            <p>Faça login para continuar.</p>
 
-       <div class="form-container">
+        </section>
+        <section class="login-container">
+            <form action="" method="post">
+                <h1>Login</h1>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                    <input type="password" id="senha" name="senha" required placeholder="Senha">
+                    <button type="submit">Entrar</button>
+                    <a href="telaDeCadastro.php">Criar conta</a>
+            </form>
 
-             <form class="form-content" action="../controller/loginController.php" method="POST">
+        </section>
 
-            <h1>Login</h1>
-            <div class="input-group">
-                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-            </div>
-            
-            <div class="input-group">
-                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
-            </div>
-
-            <button type="submit">Entrar</button>
-            <p>Não tem uma conta? <a href="../view/telaDeCadastro.php">Cadastre-se</a></p>
-
-        </form>
-       </div>
     </main>
+    
 </body>
 </html>
