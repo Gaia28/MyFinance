@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     height: 100%;
     width: 50%;
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(255, 245, 245);
 }
 .form-content{
  
@@ -65,7 +65,7 @@ body{
     margin-bottom: 10%;
 }
 .input-group p{
-    font-size: px;
+    font-size: 1vw;
     color: #555;
 }
 .welcome-container{
@@ -96,25 +96,39 @@ body{
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        height: 100vh;
+        gap: 10px;
     }
-     .welcome-container {
+    .welcome-container {
         width: 100%;
-        height: 40%;
+        height: 45%;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         padding: 10px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; /* Mantém tudo centralizado */
         flex-direction: column;
     }
     .welcome-container h1 {
-        margin-top: 20px;
-        font-size: 2.0rem;
+        margin-top: 10%;
+        font-size: 10vw;
+    }
+    .welcome-container p {
+        font-size: 5vw;
+        text-align: left; /* Corrigido aqui */
+        margin-bottom: 20px;
+        width: 100%; /* Garante alinhamento à esquerda */
+    }
+    .welcome-container .logo{
+        width: 40%;
+        max-height: 200px;
+        margin-bottom: 20px;
     }
     .login-container {
         width: 100%;
         height: 60%;
+        margin-bottom: 10px;
     }
     .form-content {
         width: 90%;

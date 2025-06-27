@@ -11,7 +11,6 @@
         <section class="welcome-container">
             <h1>Welcome to MyFinance</h1>
             <p>Manage your finances simply and efficiently.</p>
-            <p>Faça login para continuar.</p>
             <img src="../assets/logo.svg" alt="" class="logo">
 
         </section>
