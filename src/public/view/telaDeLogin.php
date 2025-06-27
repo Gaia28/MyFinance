@@ -16,12 +16,12 @@
         </section>
         <section class="login-container">
             <div class="form-content">
-                <form action="" method="post">
+                <form action="../../app/controllers/logonController.php" method="post">
                     
                     <div class="input-group">
                         <h1>Login</h1>
-                        <input type="email" id="email" name="email" required placeholder="Email">
-                        <input type="password" id="senha" name="senha" required placeholder="Senha">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" id="senha" name="senha" placeholder="Senha">
                           <button type="submit">Entrar</button>
                     <p>Don't have an account? <a href="telaDeCadastro.php"> Register</a></p> 
                     </div>
