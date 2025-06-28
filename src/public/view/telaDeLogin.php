@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -16,11 +17,11 @@
         </section>
         <section class="login-container">
             <div class="form-content">
-                <form action="../../app/controllers/logonController.php" method="post">
+                <form action="../../app//process//processarLogin.php" method="post">
                     
                     <div class="input-group">
                         <h1>Login</h1>
-                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input  id="email" name="email" placeholder="Email">
                         <input type="password" id="senha" name="senha" placeholder="Senha">
                           <button type="submit">Entrar</button>
                     <p>Don't have an account? <a href="telaDeCadastro.php"> Register</a></p> 
