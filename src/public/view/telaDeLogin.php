@@ -17,7 +17,7 @@
         </section>
         <section class="login-container">
             <div class="form-content">
-                <form action="../../app//process//processarLogin.php" method="post">
+                <form action="../../app/process/processarLogin.php" method="post">
                     
                     <div class="input-group">
                         <h1>Login</h1>
