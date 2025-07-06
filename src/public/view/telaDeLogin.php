@@ -17,10 +17,12 @@
         </section>
         <section class="login-container">
             <div class="form-content">
+
                 <form action="src/app/process/processarLogin.php"method="post">
                     
                     <div class="input-group">
                         <h1>Login</h1>
+                         <div id="mensagem-erro" class="erro" style="color: red; text-align: center;"></div>
                         <p id = "msg-error"></p>
                         <input  id="email" name="email" placeholder="Email">
                         <input type="password" id="senha" name="senha" placeholder="Senha">
@@ -35,6 +37,9 @@
         </section>
 
     </main>
+    <script src="src/public/script/erros.js">
+
+    </script>
     
 </body>
 </html>

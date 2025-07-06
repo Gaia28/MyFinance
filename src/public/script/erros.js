@@ -1,4 +1,5 @@
-var msgError = document.getElementById("msg-error");
-if (msgError) {
-    msgError.textContent = "Preencha todos os campos!";
-}
+const erro = sessionStorage.getItem('erroLogin');
+  if (erro) {
+    document.getElementById('mensagem-erro').innerText = erro;
+    sessionStorage.removeItem('erroLogin');
+  }
