@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 class LoginController {
 
    public function validarCamposLogin($email, $senha) {

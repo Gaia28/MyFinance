@@ -20,10 +20,12 @@
                 
                 <div class="input-group">
                     <h1>Register</h1>
-                    <input type="text" id="nome" name="nome" required placeholder="Full Name">
-                    <input type="email" id="email" name="email" required placeholder="Email">
-                    <input type="password" id="senha" name="senha" required placeholder="Password">
-                    <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirm Password">
+                    <div id="mensagem-erro" class="erro" style="color: red; text-align: center;"></div>
+
+                    <input type="text" id="nome" name="nome" placeholder="Full Name">
+                    <input type="email" id="email" name="email"  placeholder="Email">
+                    <input type="password" id="senha" name="senha" placeholder="Password">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirm Password">
 
                     <button type="submit">Cadastrar</button>
                 <p>Already have an account?<a href="telaDeLogin.php"> Enter</a></p>
@@ -35,5 +37,9 @@
             
        
     </main>
+
+     <script src="src/public/script/erros.js">
+
+    </script>
 </body>
 </html>
