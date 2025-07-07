@@ -21,6 +21,7 @@
                     
                     <div class="input-group">
                         <h1>Login</h1>
+                        <p id = "msg-error"></p>
                         <input  id="email" name="email" placeholder="Email">
                         <input type="password" id="senha" name="senha" placeholder="Senha">
                           <button type="submit">Entrar</button>
