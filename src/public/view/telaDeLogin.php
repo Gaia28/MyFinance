@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to MyFinance</title>
-    <link rel="stylesheet" href="../../public/styles/styleLogon.css">
+    <link rel="stylesheet" href="src/public/styles/styleLogon.css">
 </head>
 <body>
     <main class="container">
         <section class="welcome-container">
             <h1>Welcome to MyFinance</h1>
             <p>Manage your finances simply and efficiently.</p>
-            <img src="../assets/logo.svg" alt="" class="logo">
+            <img src="src/public/assets/logo.svg" alt="" class="logo">
 
         </section>
         <section class="login-container">
@@ -24,7 +24,7 @@
                         <input  id="email" name="email" placeholder="Email">
                         <input type="password" id="senha" name="senha" placeholder="Senha">
                           <button type="submit">Entrar</button>
-                    <p>Don't have an account? <a href="telaDeCadastro.php"> Register</a></p> 
+                    <p>Don't have an account? <a href="cadastro"> Register</a></p> 
                     </div>
                   
                 </form>

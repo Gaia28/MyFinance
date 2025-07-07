@@ -66,6 +66,8 @@ body{
 }
 .input-group p{
     font-size: 1vw;
+    text-align: center;
+    margin-top: 10px;
     color: #555;
 }
 .welcome-container{
@@ -142,5 +144,10 @@ body{
     .input-group h1 {
         margin: 0;
         font-size: 1.5rem;
+    }
+    .input-group p{
+        font-size: 0.8rem;
+        text-align: center; 
+        
     }
 }

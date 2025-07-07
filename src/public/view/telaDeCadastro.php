@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - MyFinance</title>
-    <link rel="stylesheet" href="../styles/styleLogon.css">
+    <link rel="stylesheet" href="src/public/styles/styleLogon.css">
 </head>
 <body>
     <main class="container">
@@ -12,7 +12,7 @@
         <section class="welcome-container">
             <h1>Welcome to MyFinance</h1>
             <p>Create your account and log in</p>
-            <img src="../assets/CreateAccount.svg" alt="create account image" class="logo">
+            <img src="src/public/assets/CreateAccount.svg" alt="create account image" class="logo">
         </section>
 
         <section class="login-container">
@@ -27,11 +27,13 @@
 
                     <button type="submit">Cadastrar</button>
                 <p>Already have an account?<a href="telaDeLogin.php"> Enter</a></p>
+                 </div>
+                 </form>
 
         </section>
                 
-            </form>
-        </div>
+            
+       
     </main>
 </body>
 </html>
