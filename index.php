@@ -10,7 +10,7 @@ switch ($url) {
         require_once __DIR__ . '/src/public/view/telaDeCadastro.php';
         break;
     case 'home':
-        require_once __DIR__ . '/src/public/view/telaInicial.php';
+        require_once __DIR__ . '/src/public/view/telaPrincipal.php';
         break;
     default:
         header('Location: /MyFinance/login');

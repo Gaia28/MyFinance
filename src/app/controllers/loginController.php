@@ -17,6 +17,8 @@ class LoginController {
         exit;
     }
 //adicionar aqui a lógica de autenticação, como verificar o email e senha no banco de dados
+    echo "<script> window.location.href = '/MyFinance/home';
+    </script>";
     return true;
 }
 
