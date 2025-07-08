@@ -16,7 +16,7 @@
         </section>
 
         <section class="login-container">
-            <form class="form-content" action="" method="post">
+            <form class="form-content" action="src/app/process/processarCadastro.php" method="post">
                 
                 <div class="input-group">
                     <h1>Register</h1>
@@ -28,7 +28,7 @@
                     <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirm Password">
 
                     <button type="submit">Cadastrar</button>
-                <p>Already have an account?<a href="telaDeLogin.php"> Enter</a></p>
+                <p>Already have an account?<a href="login"> Enter</a></p>
                  </div>
                  </form>
 

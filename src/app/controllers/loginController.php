@@ -3,26 +3,17 @@ class LoginController {
 
    public function validarCamposLogin($email, $senha) {
     if (!$this->validarCampos($email, $senha)) {
-     echo "<script>
-        sessionStorage.setItem('erroLogin', 'preencha todos os campos!');
-        window.location.href = '/MyFinance/login';
-        </script>";
+     $this->gerarErro("Preencha todos os campos!");
         exit;
     }
 
     if (!$this->validarEmail($email)) {
-        echo "<script>
-        sessionStorage.setItem('erroLogin', 'Utilize um E-mail válido');
-        window.location.href = '/MyFinance/login';
-        </script>";
+        $this->gerarErro("Formato de email inválido!");
         exit;
     }
 
     if (!$this->validarSenha($senha)) {
-       echo "<script>
-        sessionStorage.setItem('erroLogin', 'Sua senha deve ter no mínimo 6 caracteres!');
-        window.location.href = '/MyFinance/login';
-        </script>";
+      $this->gerarErro("Sua senha deve ter pelo menos 6 caracteres!");
         exit;
     }
 //adicionar aqui a lógica de autenticação, como verificar o email e senha no banco de dados
@@ -42,6 +33,14 @@ class LoginController {
     private function validarSenha($senha) {
         $senha = trim($senha);
         return strlen($senha) >= 6;
+    }
+    
+    private function gerarErro($mensagem) {
+        echo "<script>
+        sessionStorage.setItem('erroLogin', '$mensagem');
+        window.location.href = '/MyFinance/login';
+        </script>";
+        exit;
     }
 
 }
