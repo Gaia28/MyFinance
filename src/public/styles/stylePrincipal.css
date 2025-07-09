@@ -42,11 +42,14 @@ header {
 }
 .barra-lateral .opcao {
     width: 100%;
-    border: 1px solid black;
     border-radius: 4px;
     padding: 10px;
     cursor: pointer;
     text-align: center;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.barra-lateral .opcao:hover{
+    transform: scale(1.05);
 }
 #sair {
     margin-top: auto;
