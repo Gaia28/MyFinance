@@ -1,39 +1,46 @@
-*{
+/* Reset e base */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    background-color: aquamarine;
-}
-body{
+body {
     font-family: Arial, sans-serif;
     height: 100vh;
-    background-color: #fdfafa;
+    background-color: #f3f3f3;
     color: #333;
 }
-.container{
+
+/* Header */
+header {
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(103, 185, 157);
+}
+
+/* Layout principal */
+.container {
     display: flex;
     flex-direction: row;
     height: 100%;
     width: 100%;
 }
-.barra-lateral{
+
+/* Barra lateral */
+.barra-lateral {
     width: 12%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    gap: 20px;
-    border: 1px solid black;
+    padding: 2% 1% 4% 1%;
+    gap: 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+    position: relative;
 }
-.barra-lateral .logo{
-    width: 100%;
-    background-color: aquamarine;
-    
-
-}
-
-.barra-lateral .opcao{
+.barra-lateral .opcao {
     width: 100%;
     border: 1px solid black;
     border-radius: 4px;
@@ -41,19 +48,73 @@ body{
     cursor: pointer;
     text-align: center;
 }
-
-.barra-lateral .perfil{
+#sair {
+    margin-top: auto;
+    margin-bottom: 20%;
+}
+.barra-lateral .perfil {
     width: 100%;
     height: 10%;
     margin-top: auto;
-    margin-bottom: 20%;
+    display: flex;
     border: 1px solid black;
     padding: 10px;
     border-radius: 10px;
 }
-
-.itens-container{
-    background-color: rgb(168, 168, 255);
-    width: 100%;
-
+.perfil .foto-perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 10%;
+    background-color: #888;
+    margin-right: 10px;
 }
+
+/* Itens container e grid */
+.itens-container {
+    width: 100%;
+    height: 100%;
+}
+.itens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    height: 100%;
+    gap: 2%;
+}
+
+/* Cards de ganhos, despesas, gráfico, etc */
+.item-ganhos, .item-despesas, .grafico, .despesas-futuras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(192, 255, 234, 0.7);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #464646;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+}
+.item-ganhos {
+    width: 60%;
+    height: 30%;
+}
+.item-despesas, .despesas-futuras {
+    width: 30%;
+    height: 30%;
+    margin-left: 5%;
+}
+.grafico {
+    width: 60%;
+    height: 60%;
+}
+
+/* Tipografia dos cards */
+.item-ganhos h1, .item-despesas h1 {
+    font-size: 4.5rem;
+}
+.item-ganhos p, .item-despesas p {
+    font-size: 1.5rem;
+    color: #464646;
+    margin-bottom: 10px;
+}
+

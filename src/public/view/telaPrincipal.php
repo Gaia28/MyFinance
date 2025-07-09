@@ -7,14 +7,21 @@
     <title>home</title>
 </head>
 <body>
-    
+     <header>
+        <h1>MyFinance</h1> 
+        <div class="perfil">
+                <div class="foto-perfil">  
+                   
+                </div>
+                <p>nome</p>
+
+            </div>           
+    </header>
+
     <main class="container">
 
         <section class="barra-lateral">
-            <div class="logo">
-                <h1>MyFinance</h1>
-            </div>
-
+            
             <div class="opcao">
                 <p>Registrar ganhos</p>
             </div>
@@ -26,20 +33,36 @@
             <div class="opcao">
                 <p>Registrar ganhos</p>
             </div>
+            <div class="opcao" id="sair">
+                <p>Sair</p>
 
-            <div class="perfil">
-                <img src="" alt="foto-perfil">
-                <p>nome</p>
-
-            </div>
         </section>
 
         <section class="itens-container">
-            <h1>container de itens</h1>
+           
+            <div class="itens-grid">
+                <div class="item-ganhos">
+                    <p>Meus ganhos</p>
+                    <h1>R$000.00</h1>
+                </div>
+                <div class="item-despesas">
+                    <p>Minhas despesas</p>
+                    <h1>R$000.00</h1>
+                </div>
 
+                <div class="grafico">
+                    <p>Gráfico de despesas</p>
+                    <img src="src/public/assets/grafico.svg" alt="Gráfico de despesas">
+
+                </div>
+
+                <div class="despesas-futuras">
+                    <p>Minhas despesas futuras</p>
+                    <h1>R$000.00</h1>
+
+                </div>
+            </div>
         </section>
-
-
     </main>
     
 </body>
