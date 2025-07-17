@@ -38,6 +38,7 @@ header {
     padding: 2% 1% 4% 1%;
     gap: 40px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+    background-color: aquamarine;
     position: relative;
 }
 .barra-lateral .opcao {
@@ -46,7 +47,8 @@ header {
     padding: 10px;
     cursor: pointer;
     text-align: center;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(184, 184, 184, 0.24) 0px 3px 8px;
+    background-color: white
 }
 .barra-lateral .opcao:hover{
     transform: scale(1.05);
@@ -109,6 +111,29 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 .grafico {
     width: 60%;
     height: 60%;
+}
+
+#registrar-ganho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#registrar-ganho:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+.button-ganho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border: 5px dashed #39ff7e;
+    border-radius: 10px;
+    box-shadow:  0 1px 4px rgba(0, 0, 0, 0.16);
 }
 
 /* Tipografia dos cards */

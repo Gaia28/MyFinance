@@ -12,6 +12,9 @@ switch ($url) {
     case 'home':
         require_once __DIR__ . '/src/public/view/telaPrincipal.php';
         break;
+    case 'registrarganhos':
+        require_once __DIR__ . '/src/public/view/registrarGanhos.php';
+        break;
     default:
         header('Location: /MyFinance/login');
         exit;

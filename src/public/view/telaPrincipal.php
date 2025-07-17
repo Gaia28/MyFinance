@@ -23,7 +23,7 @@
         <section class="barra-lateral">
             
             <div class="opcao">
-                <p>Registrar ganhos</p>
+                <a href="registrarganhos"> Registrar ganhos</a> 
             </div>
 
             <div class="opcao">
