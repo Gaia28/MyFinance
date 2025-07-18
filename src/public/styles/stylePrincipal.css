@@ -20,6 +20,12 @@ header {
     justify-content: space-between;
     color: rgb(103, 185, 157);
 }
+header a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
 
 /* Layout principal */
 .container {
@@ -38,7 +44,7 @@ header {
     padding: 2% 1% 4% 1%;
     gap: 40px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
-    background-color: aquamarine;
+    background-color: rgb(166, 251, 223);
     position: relative;
 }
 .barra-lateral .opcao {
@@ -118,22 +124,27 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
+/* Hover otimizado para o botão de ganho */
+.button-ganho,
 #registrar-ganho:hover {
+    transition: transform 0.5s;
+}
+.button-ganho:hover {
     transform: scale(1.05);
-    transition: 0.5s;
 }
 .button-ganho{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 20px;
     cursor: pointer;
+    background-color: #d2ffd2;
     border: 5px dashed #39ff7e;
     border-radius: 10px;
     box-shadow:  0 1px 4px rgba(0, 0, 0, 0.16);
+    font-size: 5dvh;
 }
 
 /* Tipografia dos cards */
@@ -144,5 +155,38 @@ header {
     font-size: 1.5rem;
     color: #464646;
     margin-bottom: 10px;
+}
+
+/* Centralização e estilo do modal dialog */
+dialog[open],
+#ganho-modal[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 320px;
+    min-height: 200px;
+    padding: 32px 24px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background: #fff;
+    z-index: 1000;
+}
+dialog::backdrop {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+}
+#btsair{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
 }
 
