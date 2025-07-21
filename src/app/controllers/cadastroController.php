@@ -3,6 +3,8 @@
 class CadastroController{
 
     public function validarCamposCadastro($nome, $email, $senha, $confirmarSenha){
+        $email = trim(filter_var($email, FILTER_SANITIZE_EMAIL));
+        
         if (!$this->validarCampos($nome, $email, $senha, $confirmarSenha)) {
             $this->gerarErro("Preencha todos os campos!");
             exit;
@@ -22,6 +24,7 @@ class CadastroController{
             $this->gerarErro("As senhas não coincidem!");
             exit;
         }
+        echo var_dump($nome, $email, $senha, $confirmarSenha);
 
         return true;
 
@@ -31,7 +34,6 @@ class CadastroController{
         return !empty($nome) && !empty($email) && !empty($senha) && !empty($confirmarSenha);
     }
     private function validarEmail($email) {
-        $email = trim(filter_var($email, FILTER_SANITIZE_EMAIL));
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
     private function validarSenha($senha) {

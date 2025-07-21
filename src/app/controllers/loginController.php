@@ -2,6 +2,9 @@
 class LoginController {
 
    public function validarCamposLogin($email, $senha) {
+
+    $email = trim(filter_var($email, FILTER_SANITIZE_EMAIL));
+
     if (!$this->validarCampos($email, $senha)) {
      $this->gerarErro("Preencha todos os campos!");
         exit;
@@ -28,7 +31,6 @@ class LoginController {
     }
 
     private function validarEmail($email) {
-        $email = trim(filter_var($email, FILTER_SANITIZE_EMAIL));
         return filter_var($email, FILTER_VALIDATE_EMAIL);
     }
 

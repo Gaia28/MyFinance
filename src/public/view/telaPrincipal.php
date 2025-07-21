@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/public/styles/stylePrincipal.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>home</title>
 </head>
 <body>
@@ -52,7 +54,8 @@
 
                 <div class="grafico">
                     <p>Gráfico de despesas</p>
-                    <img src="src/public/assets/grafico.svg" alt="Gráfico de despesas">
+                    <canvas id="meuGrafico"></canvas>
+                    <script src="src/public/script/chartJS.js"></script>
 
                 </div>
 
