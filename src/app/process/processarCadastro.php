@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $confirmarSenha = $_POST['confirmar_senha'] ?? '';
 
     $cadastroController = new CadastroController();
-    $cadastroController->validarCamposCadastro($nome, $email, $senha, $confirmarSenha);
+    $cadastroController->validarCampos($nome, $email, $senha, $confirmarSenha);
 }
 
 ?>

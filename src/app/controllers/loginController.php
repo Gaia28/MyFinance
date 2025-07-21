@@ -1,44 +1,33 @@
-<?php
-class LoginController {
+<?php 
 
-   public function validarCamposLogin($email, $senha) {
+class loginController {
 
-    $email = trim(filter_var($email, FILTER_SANITIZE_EMAIL));
+    private $dadosSanitizados = [];
 
-    if (!$this->validarCampos($email, $senha)) {
-     $this->gerarErro("Preencha todos os campos!");
-        exit;
+    public function validarCamposLogin($email, $senha) {
+        $this->dadosSanitizados = [
+            'email' => $this->sanitizeFields($email),
+            'senha' => $this->sanitizeFields($senha)
+        ];
+
+        foreach ($this->dadosSanitizados as $key => $value) {
+            empty($value) ? $this->gerarErro("Preencha todos os campos!") : null;
+        }
+
+        if (!filter_var($this->dadosSanitizados['email'], FILTER_VALIDATE_EMAIL)) {
+            $this->gerarErro("Formato de email inválido!");
+        }
+        echo "<script> window.location.href = '/MyFinance/home';</script>";
+
+        // Aqui você pode adicionar a lógica para verificar o email e senha no banco de dados
+        // Se as credenciais estiverem corretas, redirecione o usuário para a página principal
+        // Caso contrário, chame $this->gerarErro("Email ou senha incorretos!");
     }
 
-    if (!$this->validarEmail($email)) {
-        $this->gerarErro("Formato de email inválido!");
-        exit;
+    private function sanitizeFields($field) {
+        return htmlspecialchars(strip_tags(trim($field)));
     }
 
-    if (!$this->validarSenha($senha)) {
-      $this->gerarErro("Sua senha deve ter pelo menos 6 caracteres!");
-        exit;
-    }
-//adicionar aqui a lógica de autenticação, como verificar o email e senha no banco de dados
-    echo "<script> window.location.href = '/MyFinance/home';
-    </script>";
-    return true;
-}
-
-
-    private function validarCampos($email, $senha) {
-        return !empty($email) && !empty($senha);
-    }
-
-    private function validarEmail($email) {
-        return filter_var($email, FILTER_VALIDATE_EMAIL);
-    }
-
-    private function validarSenha($senha) {
-        $senha = trim($senha);
-        return strlen($senha) >= 6;
-    }
-    
     private function gerarErro($mensagem) {
         echo "<script>
         sessionStorage.setItem('erroLogin', '$mensagem');
@@ -46,6 +35,5 @@ class LoginController {
         </script>";
         exit;
     }
-
 }
 ?>
