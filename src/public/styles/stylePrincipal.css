@@ -1,0 +1,185 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Header */
+header {
+    padding: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgb(103, 185, 157);
+}
+header a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Layout principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+/* Barra lateral */
+.barra-lateral {
+    width: 12%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 1% 4% 1%;
+    gap: 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+    background-color: rgba(192, 255, 234, 0.7);
+    position: relative;
+}
+.barra-lateral .opcao {
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: rgba(184, 184, 184, 0.24) 0px 3px 8px;
+    background-color: white
+}
+.barra-lateral .opcao:hover{
+    transform: scale(1.05);
+}
+#sair {
+    margin-top: auto;
+    margin-bottom: 20%;
+}
+.barra-lateral .perfil {
+    width: 100%;
+    height: 10%;
+    margin-top: auto;
+    display: flex;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Itens container e grid */
+.itens-container {
+    width: 100%;
+    height: 100%;
+}
+.itens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2%;
+    height: 100%;
+    gap: 2%;
+}
+
+/* Cards de ganhos, despesas, gráfico, etc */
+.item-ganhos, .item-despesas, .grafico, .despesas-futuras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(192, 255, 234, 0.7);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #464646;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.16);
+}
+.item-ganhos {
+    width: 60%;
+    height: 30%;
+}
+.item-despesas, .despesas-futuras {
+    width: 30%;
+    height: 30%;
+    margin-left: 5%;
+}
+.grafico {
+    width: 60%;
+    height: 60%;
+}
+
+#registrar-ganho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* Hover otimizado para o botão de ganho */
+.button-ganho,
+#registrar-ganho:hover {
+    transition: transform 0.5s;
+}
+.button-ganho:hover {
+    transform: scale(1.05);
+}
+.button-ganho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #d2ffd2;
+    border: 5px dashed #39ff7e;
+    border-radius: 10px;
+    box-shadow:  0 1px 4px rgba(0, 0, 0, 0.16);
+    font-size: 5dvh;
+}
+
+/* Tipografia dos cards */
+.item-ganhos h1, .item-despesas h1 {
+    font-size: 4.5rem;
+}
+.item-ganhos p, .item-despesas p {
+    font-size: 1.5rem;
+    color: #464646;
+    margin-bottom: 10px;
+}
+
+/* Centralização e estilo do modal dialog */
+dialog[open],
+#ganho-modal[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 320px;
+    min-height: 200px;
+    padding: 32px 24px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background: #fff;
+    z-index: 1000;
+}
+dialog::backdrop {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(2px);
+}
+#btsair{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+

@@ -4,28 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - MyFinance</title>
-    <link rel="stylesheet" href="../styles/styleLogon.css">
+    <link rel="stylesheet" href="src/public/styles/styleLogon.css">
 </head>
 <body>
     <main class="container">
+
         <section class="welcome-container">
-            <h1>Crie sua conta no MyFinance</h1>
-            <p>Gerencie suas finanças de forma simples e eficiente.</p>
-            <p>Preencha os dados para se cadastrar.</p>
+            <h1>Welcome to MyFinance</h1>
+            <p>Create your account and log in</p>
+            <img src="src/public/assets/CreateAccount.svg" alt="create account image" class="logo">
         </section>
+
         <section class="login-container">
-            <form action="" method="post">
-                <h1>Cadastro</h1>
+            <form class="form-content" action="src/app/process/processarCadastro.php" method="post">
+                
                 <div class="input-group">
-                    <input type="text" id="nome" name="nome" required placeholder="Nome completo">
-                    <input type="email" id="email" name="email" required placeholder="Email">
-                    <input type="password" id="senha" name="senha" required placeholder="Senha">
-                    <input type="password" id="confirmar_senha" name="confirmar_senha" required placeholder="Confirmar senha">
-                </div>
-                <button type="submit">Cadastrar</button>
-                <a href="telaDeLogin.php">Já tem conta? Entrar</a>
-            </form>
+                    <h1>Register</h1>
+                    <div id="mensagem-erro" class="erro" style="color: red; text-align: center;"></div>
+
+                    <input type="text" id="nome" name="nome" placeholder="Full Name">
+                    <input type="email" id="email" name="email"  placeholder="Email">
+                    <input type="password" id="senha" name="senha" placeholder="Password">
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirm Password">
+
+                    <button type="submit">Cadastrar</button>
+                <p>Already have an account?<a href="login"> Enter</a></p>
+                 </div>
+                 </form>
+
         </section>
+                
+            
+       
     </main>
+
+     <script src="src/public/script/erros.js">
+
+    </script>
 </body>
 </html>

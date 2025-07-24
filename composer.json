@@ -1,0 +1,17 @@
+{
+    "name": "mathe/my-finance",
+    "autoload": {
+        "psr-4": {
+            "Mathe\\MyFinance\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gaia28",
+            "email": "matheusgaia33@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
