@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: /MyFinance/login");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,13 +19,7 @@
 <body>
      <header>
         <a href="home">MyFinance</a> 
-        <div class="perfil">
-                <div class="foto-perfil">  
-                   
-                </div>
-                <p>nome</p>
-
-            </div>           
+   
     </header>
 
     <main class="container">

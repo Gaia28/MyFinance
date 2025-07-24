@@ -23,12 +23,6 @@ class DataTransfer{
 
             $result = $preparedStatement->execute();
 
-            if($result){
-                echo 'Usuário inserido com sucesso!';
-            }
-
-            
-
         }catch (Exception $e) {
             die("Erro ao inserir usuário: " . $e->getMessage());
         }
@@ -43,7 +37,6 @@ class DataTransfer{
             $preparedStatement->execute();
             $result = $preparedStatement->fetch(PDO::FETCH_ASSOC);
             if($result){
-                echo 'Dados encontrados: ' . $result[$column];
                 return true; // Dados encontrados
             } else {
                 return false; // Dados não encontrados

@@ -24,7 +24,6 @@ class Database{
 
             $this->connection = new PDO("mysql:host=$host;dbname=$dbname;", $user, $password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            print_r('Conectado ao banco de dados com sucesso!');
 
         } catch (PDOException $e) {
             die("Erro na conexão: " . $e->getMessage());
@@ -38,5 +37,3 @@ class Database{
     }
 }
 
-$db = new Database();
-$connection = $db->getConnection();
