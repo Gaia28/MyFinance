@@ -19,9 +19,6 @@ class loginController {
         }
         echo "<script> window.location.href = '/MyFinance/home';</script>";
 
-        // Aqui você pode adicionar a lógica para verificar o email e senha no banco de dados
-        // Se as credenciais estiverem corretas, redirecione o usuário para a página principal
-        // Caso contrário, chame $this->gerarErro("Email ou senha incorretos!");
     }
 
     private function sanitizeFields($field) {
