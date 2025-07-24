@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../../../database/dataTransfer.php';
 class CadastroController{
 
     private $dadosSanitizados = [];
@@ -27,16 +27,33 @@ class CadastroController{
         if ($this->dadosSanitizados['senha'] !== $this->dadosSanitizados['confirmar_senha']) {
             $this->gerarErro("As senhas não coincidem!");
         }
-        // $this->verificarEmailnoBanco()? $this->salvarDadosnoBanco() : $this->gerarErro("Email já cadastrado!");
+        if($this->verificarEmailnoBanco()){
+            $this->gerarErro("Email já cadastrado!");
+        }else{
+            $this->salvarDadosnoBanco();
+        }
 
 
     }
     private function verificarEmailnoBanco() {
-        $email = trim($this->dadosSanitizados['email']);
-        echo 'verificando email: ' . $email;
+        $email = $this->dadosSanitizados['email'];
+        $dataTransfer = new DataTransfer();
+        if ($dataTransfer->verifyData($email, 'usuarios', 'email')) {
+            $this->gerarErro("Email já cadastrado!");
+        }
+        
       
     }
+    //adicionar criptografia de senha
     private function salvarDadosnoBanco() {
+        $fullname = $this->dadosSanitizados['nome'];
+        $email = $this->dadosSanitizados['email'];
+        $password = $this->dadosSanitizados['senha'];
+
+        $dataTransfer = new DataTransfer();
+        $dataTransfer->insertUser($fullname, $email, $password);
+        
+        echo "<script> window.location.href = '/MyFinance/login';</script>";
       
     }
     
