@@ -47,6 +47,25 @@ class DataTransfer{
         }
 
     }
+    public function inserFinance($table, $descricao, $valor, $data) {
+       try{
+            $query = "INSERT INTO {$table} (descricao, valor, data) VALUES (:descricao, :valor, :data)";
+            $preparedStatement = $this->connectionPDO->prepare($query);
+            $preparedStatement->bindParam(':descricao', $descricao);
+            $preparedStatement->bindParam(':valor', $valor);
+            $preparedStatement->bindParam(':data', $data);
+            $result = $preparedStatement->execute();
+
+            if ($result) {
+                return true; // Inserção bem-sucedida
+            } else {
+                return false; // Falha na inserção
+            }
+       }catch (Exception $e) {
+            die("Erro ao inserir dados financeiros: " . $e->getMessage());
+        }
+    }
+    
 
 }
 ?>
