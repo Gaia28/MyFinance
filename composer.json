@@ -2,7 +2,10 @@
     "name": "mathe/my-finance",
     "autoload": {
         "psr-4": {
-            "Mathe\\MyFinance\\": "src/"
+            "Mathe\\MyFinance\\": "src/",
+            "Database\\":"database/",
+            "App\\":"src/app"
+            
         }
     },
     "authors": [
