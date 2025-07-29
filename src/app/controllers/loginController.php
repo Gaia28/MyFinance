@@ -1,6 +1,9 @@
 <?php 
+namespace App\controllers;
+
 session_start();
-require_once __DIR__ . '/../../../database/dataTransfer.php';
+
+use Database\DataTransfer;
 
 class loginController {
 

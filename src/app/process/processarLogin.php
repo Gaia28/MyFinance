@@ -1,5 +1,6 @@
 <?php 
-require_once "../controllers/loginController.php";
+require_once __DIR__ . '/../../../vendor/autoload.php';
+use App\controllers\loginController;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     

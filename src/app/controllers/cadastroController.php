@@ -1,5 +1,8 @@
 <?php
-require_once __DIR__ . '/../../../database/dataTransfer.php';
+namespace App\controllers;
+
+use Database\DataTransfer;
+
 class CadastroController{
 
     private $dadosSanitizados = [];

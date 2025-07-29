@@ -1,6 +1,9 @@
 <?php 
-require_once __DIR__ . '/../vendor/autoload.php';
-require_once __DIR__ . '/connection.php';
+namespace Database;
+
+use Database\Database;
+use Exception;
+use PDO;
 
 class DataTransfer{
     private $connectionPDO;

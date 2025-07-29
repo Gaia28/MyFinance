@@ -1,5 +1,6 @@
 <?php
-require_once "../controllers/cadastroController.php";
+require_once __DIR__ . '/../../../vendor/autoload.php';
+use App\controllers\CadastroController;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $nome = $_POST['nome'] ?? '';
