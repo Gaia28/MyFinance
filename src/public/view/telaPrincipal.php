@@ -26,8 +26,8 @@ if (!isset($_SESSION['usuario'])) {
 
         <section class="barra-lateral">
             
-            <div class="opcao">
-                <a href="registrarganhos"> Registrar ganhos</a> 
+            <div class="opcao" id = "ganhos">
+                <p>ganhos</p>
             </div>
 
             <div class="opcao">
@@ -70,5 +70,6 @@ if (!isset($_SESSION['usuario'])) {
         </section>
     </main>
     
+    <script src="src/public/script/navigation.js"></script>
 </body>
 </html>
