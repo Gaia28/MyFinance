@@ -16,7 +16,7 @@
         </section>
 
         <section class="login-container">
-            <form class="form-content" action="src/app/process/processarCadastro.php" method="post">
+            <form class="form-content" action="processarcadastro" method="post">
                 
                 <div class="input-group">
                     <h1>Register</h1>

@@ -3,7 +3,7 @@ namespace App\controllers;
 
 session_start();
 
-use Database\DataTransfer;
+use Database\dataTransfer;
 
 class loginController {
 

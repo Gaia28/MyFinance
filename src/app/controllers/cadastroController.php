@@ -1,7 +1,7 @@
 <?php
 namespace App\controllers;
 
-use Database\DataTransfer;
+use Database\dataTransfer;
 
 class CadastroController{
 
