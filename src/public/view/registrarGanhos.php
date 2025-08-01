@@ -30,7 +30,7 @@
                 </div>
             </div>
             <dialog id="ganho-modal">
-                <form method="dialog">
+                <form action = "processarganho" method = 'post'>
                     <p id="btsair">x</p>
                     <h2>Registrar Ganho</h2>
                     <label for="descricao">Descrição:</label>

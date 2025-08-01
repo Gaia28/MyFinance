@@ -29,6 +29,10 @@ switch ($url) {
         require_once __DIR__ . '/src/public/view/registrarGanhos.php';
         break;
 
+    case 'processarganho':
+        require_once __DIR__ . '/src/app/process/processarGanho.php';
+        break;   
+
     default:
         header('Location: /MyFinance/login');
         exit;
