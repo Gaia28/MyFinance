@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $valor = $_POST['valor'];
 
     $ganhosController = new ganhosController();
-    $ganhosController->mostratrmsg();
+    $ganhosController->salvarGanho('ganhos',$descricao, $valor);
 }
 
 
