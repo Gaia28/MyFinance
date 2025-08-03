@@ -18,7 +18,6 @@ class CadastroController{
 
         foreach($this->dadosSanitizados as $key => $value){
             empty($value) ? $this->gerarErro("Preencha todos os campos!") : null;
-            var_dump($key, $value);
             
         }
         if (!filter_var($this->dadosSanitizados['email'], FILTER_VALIDATE_EMAIL)) {
