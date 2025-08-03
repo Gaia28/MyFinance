@@ -4,6 +4,7 @@ namespace Database;
 use Database\Database;
 use Exception;
 use PDO;
+use PDOException;
 
 class DataTransfer{
     private $connectionPDO;
@@ -50,13 +51,13 @@ class DataTransfer{
         }
 
     }
-    public function inserFinance($table, $descricao, $valor, $data) {
+    public function inserFinance($table, $descricao, $valor) {
        try{
-            $query = "INSERT INTO {$table} (descricao, valor, data) VALUES (:descricao, :valor, :data)";
+            $query = "INSERT INTO {$table} (descricao, valor) VALUES (:descricao, :valor)";
             $preparedStatement = $this->connectionPDO->prepare($query);
             $preparedStatement->bindParam(':descricao', $descricao);
             $preparedStatement->bindParam(':valor', $valor);
-            $preparedStatement->bindParam(':data', $data);
+            // $preparedStatement->bindParam(':data', $data);
             $result = $preparedStatement->execute();
 
             if ($result) {
@@ -66,6 +67,9 @@ class DataTransfer{
             }
        }catch (Exception $e) {
             die("Erro ao inserir dados financeiros: " . $e->getMessage());
+        }catch (PDOException $e) {
+              die("Erro ao carregar dados no banco: " . $e->getMessage());
+            # code...
         }
     }
     
