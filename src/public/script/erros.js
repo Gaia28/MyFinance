@@ -9,3 +9,9 @@ const erroLogin = sessionStorage.getItem('erroLogin');
     document.getElementById('mensagem-erro').innerText = erroCadastro;
     sessionStorage.removeItem('erroCadastro');
   }
+
+  const erroFinanca = sessionStorage.getItem('erroFinanca');
+  if (erroCadastro) {
+    document.getElementById('mensagem-erro').innerText = erroCadastro;
+    sessionStorage.removeItem('erroFinanca');
+  }

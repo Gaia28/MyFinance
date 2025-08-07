@@ -30,18 +30,22 @@
                 </div>
             </div>
             <dialog id="ganho-modal">
+            <div id="mensagem-erro" class="erro" style="color: red; text-align: center;"></div>
+
                 <form action = "processarganho" method = 'post'>
                     <p id="btsair">x</p>
                     <h2>Registrar Ganho</h2>
                     <label for="descricao">Descrição:</label>
-                    <input type="text" id="descricao" name="descricao" required>
+                    <input type="text" id="descricao" name="descricao" >
                     <label for="valor">Valor:</label>
-                    <input type="number" id="valor" name="valor" required>
+                    <input type="number" id="valor" name="valor" >
                     <button type="submit">Registrar</button>
                 </form>
             </dialog>
         </section>
     </main>
     <script src="src/public/script/modal.js"></script>
+    <script src="src/public/script/erros.js">
+
 </body>
 </html>
