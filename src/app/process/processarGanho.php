@@ -8,7 +8,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $descricao = $_POST['descricao'];
     $valor = $_POST['valor'];
-    $id = $_SESSION = ['id'];
+    $id = $_SESSION['id'];
 
     $ganhosController = new ganhosController();
     $ganhosController->salvarGanho('ganhos',$descricao, $valor, $id);
