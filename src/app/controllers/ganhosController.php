@@ -7,7 +7,7 @@ class GanhosController {
 
     private $dadosSanitizados = [];
 
-    public function salvarGanho($table, $descricao, $valor) {
+    public function salvarGanho($table, $descricao, $valor, $id) {
         $this->dadosSanitizados = [
             'descricao' => $this->sanitizeFields($descricao),
             'valor' => $this->sanitizeFields($valor)
@@ -22,7 +22,7 @@ class GanhosController {
 
         $dataTransfer = new dataTransfer();
 
-        if ($dataTransfer->inserFinance($table, $this->dadosSanitizados['descricao'], $this->dadosSanitizados['valor'])) {
+        if ($dataTransfer->inserFinance($table, $this->dadosSanitizados['descricao'], $this->dadosSanitizados['valor'], (int)$id)) {
             $this->gerarAlert("Ganho registrado com sucesso!");
         } else {
             $this->gerarAlert("Erro ao registrar ganho.");
