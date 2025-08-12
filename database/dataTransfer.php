@@ -52,9 +52,9 @@ class DataTransfer{
             $preparedStatement->execute();
             $result = $preparedStatement->fetch(PDO::FETCH_ASSOC);
             if($result){
-                return true; // Dados encontrados
+                return true; 
             } else {
-                return false; // Dados não encontrados
+                return false; 
             }
 
         }catch (Exception $e) {
@@ -72,14 +72,33 @@ class DataTransfer{
             $result = $preparedStatement->execute();
 
             if ($result) {
-                return true; // Inserção bem-sucedida
+                return true; 
             } else {
-                return false; // Falha na inserção
+                return false; 
             }
        }catch (Exception $e) {
             die("Erro ao inserir dados financeiros: " . $e->getMessage());
         }catch (PDOException $e) {
               die("Erro ao carregar dados no banco: " . $e->getMessage());
+        }
+    }
+
+    public function getFinance($table, $user_id){
+        try{
+            $query = "SELECT * FROM {$table} WHERE user_id = :user_id";
+            $preparedStatement = $this->connectionPDO->prepare($query);
+            $preparedStatement->bindParam(':user_id', $user_id);
+            $preparedStatement->execute();
+            $result = $preparedStatement->fetchAll(PDO::FETCH_ASSOC);
+            if ($result) {
+                return $result; 
+            } else {
+                return false; 
+            }
+        }catch (Exception $e) {
+            die("Erro ao buscar dados financeiros: " . $e->getMessage());
+    }catch (PDOException $e) {
+            die("Erro ao carregar dados financeiros: " . $e->getMessage());
         }
     }
     
