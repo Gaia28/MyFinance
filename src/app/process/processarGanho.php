@@ -11,6 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $id = $_SESSION['id'];
 
     $ganhosController = new ganhosController();
+    $ganhosController->getGanhos('ganhos', $id);
     $ganhosController->salvarGanho('ganhos',$descricao, $valor, $id);
 }
 

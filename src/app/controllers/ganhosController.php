@@ -29,6 +29,12 @@ class GanhosController {
         }
     }
 
+    public function getGanhos($table, $id) {
+        $dataTransfer = new dataTransfer();
+        return $dataTransfer->getFinance($table, (int)$id);
+        
+    }
+
     private function sanitizeFields($fields) {
         return htmlspecialchars(strip_tags(trim($fields)));
     }
