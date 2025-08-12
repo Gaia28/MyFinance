@@ -32,6 +32,17 @@ class DataTransfer{
         }
 
     }
+    public function getUserByEmail($email) {
+        try {
+            $query = "SELECT * FROM usuarios WHERE email = :email";
+            $preparedStatement = $this->connectionPDO->prepare($query);
+            $preparedStatement->bindParam(':email', $email);
+            $preparedStatement->execute();
+            return $preparedStatement->fetch(PDO::FETCH_ASSOC);
+        } catch (Exception $e) {
+            die("Erro ao buscar usuário: " . $e->getMessage());
+        }
+    }
     //verificar a segurança da query (sql injection)
     public function verifyData($value, $table, $column) {
         try{
@@ -51,13 +62,13 @@ class DataTransfer{
         }
 
     }
-    public function inserFinance($table, $descricao, $valor) {
+    public function inserFinance($table, $descricao, $valor, $user_id) {
        try{
-            $query = "INSERT INTO {$table} (descricao, valor) VALUES (:descricao, :valor)";
+            $query = "INSERT INTO {$table} (descricao, valor, user_id) VALUES (:descricao, :valor, :user_id)";
             $preparedStatement = $this->connectionPDO->prepare($query);
             $preparedStatement->bindParam(':descricao', $descricao);
             $preparedStatement->bindParam(':valor', $valor);
-            // $preparedStatement->bindParam(':data', $data);
+            $preparedStatement->bindParam(':user_id', $user_id);
             $result = $preparedStatement->execute();
 
             if ($result) {
@@ -69,7 +80,6 @@ class DataTransfer{
             die("Erro ao inserir dados financeiros: " . $e->getMessage());
         }catch (PDOException $e) {
               die("Erro ao carregar dados no banco: " . $e->getMessage());
-            # code...
         }
     }
     
