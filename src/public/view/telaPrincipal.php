@@ -1,10 +1,9 @@
 <?php 
 session_start();
-if (!isset($_SESSION['usuario'])) {
+if (!isset($_SESSION['email'])) {
     header("Location: /MyFinance/login");
     exit();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
