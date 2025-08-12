@@ -33,8 +33,12 @@ class loginController {
 
        if($dataTransfer->verifyData($email, 'usuarios','email') 
         && $dataTransfer->verifyData($senha, 'usuarios','senha') == $senha){
-            $_SESSION['usuario'] = $email; 
+
+            $_SESSION['id'] = $dataTransfer->getUserByEmail($email)['id'];
+            $_SESSION['nomeCompleto'] = $dataTransfer->getUserByEmail($email)['nomeCompleto'];
+            $_SESSION['email'] = $email; 
             $_SESSION['senha'] = $senha; 
+
             echo "<script> window.location.href = '/MyFinance/home';</script>";
 
         } else {
