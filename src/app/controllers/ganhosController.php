@@ -31,7 +31,12 @@ class GanhosController {
 
     public function getGanhos($table, $id) {
         $dataTransfer = new dataTransfer();
-        return $dataTransfer->getFinance($table, (int)$id);
+        $ganhos = $dataTransfer->getFinance($table, (int)$id);
+        foreach ($ganhos as $ganho) {
+            echo "Descrição: " . htmlspecialchars($ganho['descricao']) . "<br>";
+            echo "Valor: " . htmlspecialchars($ganho['valor']) . "<br>";
+            echo "Data: " . htmlspecialchars($ganho['data']) . "<br><hr>";
+        }
         
     }
 

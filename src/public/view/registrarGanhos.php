@@ -1,3 +1,15 @@
+<?php
+session_start();
+require_once __DIR__ . '/../../../vendor/autoload.php';
+
+use App\controllers\GanhosController;
+
+if (!isset($_SESSION['id'])) {
+    header("Location: /MyFinance/login");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -44,8 +56,10 @@
             </dialog>
         </section>
     </main>
+    <?php $ganhosController = new GanhosController();
+$ganhosController->getGanhos('ganhos', $_SESSION['id']); ?>
     <script src="src/public/script/modal.js"></script>
-    <script src="src/public/script/erros.js">
+    <script src="src/public/script/erros.js"></script>
 
 </body>
 </html>
